@@ -1,17 +1,16 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login/Login';
+import React from "react";
+import "./App.css";
 
+import MainRoutes from "./components/Routes";
+import { ToastContainer } from "react-toastify";
 
-const App:React.FC=()=>{
+const App: React.FC = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login/>} />
-      </Routes>
-    </Router>
-  )
-}
+    <div>
+      <MainRoutes />
+      <ToastContainer limit={1} autoClose={1000} position="top-center" />
+    </div>
+  );
+};
 
 export default App;
